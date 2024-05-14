@@ -1,0 +1,52 @@
+Title: Documentation for generate_WFFs Function
+
+Purpose:
+The function generates well-formed formulas (WFFs) in propositional logic using a given number of symbols.
+
+Parameters:
+- n: An integer representing the maximum number of symbols to be used in generating the formulas.
+
+Return Value:
+- A list containing unique well-formed formulas up to n symbols.
+
+Code Explanation:
+1. Base Case (n == 0):
+   - When n is 0, the function returns a list containing the symbols 'T', 'F', 'p', and 'q' colored in yellow. These represent truth values (True and False) and propositional variables.
+
+2. Recursive Case (n > 0):
+   - Iterates through each possible combination of operators and operands to generate formulas.
+   - Uses a nested loop structure to combine left and right sub-formulas with operators.
+   - Recursively calls generate_WFFs to build sub-formulas for each side of the operator.
+   - Appends the constructed formula to the result list.
+
+Code Details:
+- Operators: The function supports the following logical operators:
+  - Negation (¬)
+  - Disjunction (∨)
+  - Conjunction (∧)
+  - Implication (→)
+  - Biconditional (↔)
+- Coloring: The symbols and operators are colored using ANSI escape codes. Yellow is used for truth values and variables, and cyan is used for operators.
+- Formula Length Check: There's a check to ensure that only formulas up to length n are added to the result list.
+- Duplicate Removal: Uses a set to remove duplicate formulas.
+- Output: Prints each unique formula followed by an empty line.
+- Total Combinations: Prints the total number of generated formulas.
+
+Sample Output:
+For n = 1, the output might look like:
+  p 
+  p
+
+  ( p ∨  p )
+  p ∨  p
+
+  ( p ∧  p )
+  p ∧  p
+
+  ( p →  p )
+  p →  p
+
+  ( p ↔  p )
+  p ↔  p
+
+Total number of combinations: 15
