@@ -23,7 +23,11 @@ for formula in set(WFFs):  # Using set to remove duplicates
 
 print("Total number of combinations:", len(WFFs))
 print("End of the proccess")
+<<<<<<< HEAD
 print("Developmen Proccess continue")
+=======
+print("Developmen")
+>>>>>>> dddaf9cab407fabaa42370215a39eab55b8c6f95
 
 # n = 0 total number of combinations : 0
 # n = 1 total number of combinations : 80
